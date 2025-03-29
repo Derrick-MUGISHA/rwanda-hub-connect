@@ -135,6 +135,10 @@ export default function ServicesPage() {
           service.type === "hotel" &&
           !service.name.toLowerCase().includes("lodge")
       );
+    } else if (activeTab === "air-ticket") {
+      filtered = filtered.filter((service) => service.type === "air-ticket");
+    } else if (activeTab === "taxi") {
+      filtered = filtered.filter((service) => service.type === "taxi");
     }
 
     if (searchQuery) {
@@ -330,7 +334,7 @@ export default function ServicesPage() {
           </h1>
           <p className="text-center text-gray-600 max-w-2xl mx-auto">
             Discover the perfect place to stay during your Rwandan adventure,
-            from luxury hotels to cozy Airbnb homes.
+            from luxury hotels to cozy Airbnb homes, taxi services, Air tickets and more.
           </p>
         </div>
 
@@ -344,6 +348,8 @@ export default function ServicesPage() {
               <TabsTrigger value="all">All Accommodations</TabsTrigger>
               <TabsTrigger value="hotel">Hotels</TabsTrigger>
               <TabsTrigger value="airbnb">Airbnbs & Lodges</TabsTrigger>
+              <TabsTrigger value="air-ticket">Air-ticket</TabsTrigger>
+              <TabsTrigger value="taxi">Taxi</TabsTrigger>
             </TabsList>
           </div>
 
@@ -639,6 +645,8 @@ export default function ServicesPage() {
                               <SelectItem value="all">All Types</SelectItem>
                               <SelectItem value="hotel">Hotel</SelectItem>
                               <SelectItem value="airbnb">Airbnb</SelectItem>
+                              <SelectItem value="air-ticket">Air Ticket</SelectItem>
+                              <SelectItem value="taxi">Taxi</SelectItem>
                             </SelectContent>
                           </Select>
                         </div>
@@ -859,6 +867,13 @@ export default function ServicesPage() {
           <TabsContent value="airbnb" className="mt-0">
             <ServiceGrid services={filteredServices} isLoading={isLoading} />
           </TabsContent>
+          <TabsContent value="air-ticket" className="mt-0">
+            <ServiceGrid services={filteredServices} isLoading={isLoading} />
+          </TabsContent>
+          <TabsContent value="taxi" className="mt-0">
+            <ServiceGrid services={filteredServices} isLoading={isLoading} />
+          </TabsContent>
+
         </Tabs>
       </div>
     </PageLayout>

@@ -34,6 +34,7 @@ export interface Service {
   email?: string; // Added for contact information
 }
 
+
 export const services: Service[] = [
   {
     id: "hotel-1",

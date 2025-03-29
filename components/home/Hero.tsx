@@ -189,16 +189,16 @@ export const Hero = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+      {/* <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
         <div className="w-8 h-12 rounded-full border-2 border-white/50 flex items-start justify-center p-1">
           <div className="w-1.5 h-3 bg-white/80 rounded-full animate-[fade-in_1.5s_infinite_alternate]"></div>
         </div>
-      </div>
+      </div> */}
 
       {/* Search Dialog */}
       <CommandDialog open={isSearchOpen} onOpenChange={setIsSearchOpen}>
         <CommandInput
-          placeholder="Search for accommodations, blogs, jobs..."
+          placeholder="Search for accommodations, blogs, Air tickets, taxi, jobs..."
           value={searchQuery}
           onValueChange={setSearchQuery}
         />

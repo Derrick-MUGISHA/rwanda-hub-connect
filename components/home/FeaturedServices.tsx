@@ -158,7 +158,7 @@ export const     FeaturedServices = () => {
             </div>
 
             <div className="flex flex-wrap gap-2">
-              <button
+              {/* <button
                 onClick={() => setSelectedProvince(null)}
                 className={`px-3 py-1 rounded-full text-xs font-medium ${
                   !selectedProvince
@@ -167,8 +167,8 @@ export const     FeaturedServices = () => {
                 }`}
               >
                 All Provinces
-              </button>
-              {provinces.map((province) => (
+              </button> */}
+              {/* {provinces.map((province) => (
                 <button
                   key={province}
                   onClick={() => setSelectedProvince(province)}
@@ -181,27 +181,8 @@ export const     FeaturedServices = () => {
                   <MapPin className="h-3 w-3 mr-1" />
                   {province}
                 </button>
-              ))}
+              ))} */}
             </div>
-
-            {(activeTab === "hotels" || activeTab === "airbnb") && (
-              <DropdownMenu
-                open={guestsMenuOpen}
-                onOpenChange={setGuestsMenuOpen}
-              >
-                <DropdownMenuTrigger asChild>
-                  <Button variant="outline" className="flex items-center gap-2">
-                    <Users className="h-4 w-4" />
-                    <span>
-                      {guests} Guest{guests !== 1 ? "s" : ""}
-                    </span>
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-72 p-4">
-                  {/* Accommodation filter controls remain the same */}
-                </DropdownMenuContent>
-              </DropdownMenu>
-            )}
           </div>
         </div>
 
