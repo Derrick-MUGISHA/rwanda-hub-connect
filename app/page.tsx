@@ -1,3 +1,4 @@
+"use client"
 import { AboutRwanda } from "@/components/home/AboutRwanda"
 import { BlogPreview } from "@/components/home/BlogPreview"
 import { FeaturedServices } from "@/components/home/FeaturedServices"
